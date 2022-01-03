@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @contact.contact_id %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @contact.subject %>
+</p>
+
+<p>
+  <strong>Responsible person:</strong>
+  <%= @contact.responsible_person %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @contact.origin %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @contact.priority %>
+</p>
+
+<p>
+  <strong>Response deadline:</strong>
+  <%= @contact.response_deadline %>
+</p>
+
+<p>
+  <strong>Requirement:</strong>
+  <%= @contact.requirement %>
+</p>
+
+<p>
+  <strong>Other point:</strong>
+  <%= @contact.other_point %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @contact.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @contact.content %>
+</p>
+
+<p>
+  <strong>Staus:</strong>
+  <%= @contact.staus %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>

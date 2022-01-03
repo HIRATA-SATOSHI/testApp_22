@@ -1,0 +1,72 @@
+<%= form_with(model: contact, local: true) do |form| %>
+  <% if contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+        <% contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :contact_id %>
+    <%= form.text_field :contact_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_field :subject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :responsible_person %>
+    <%= form.text_field :responsible_person %>
+  </div>
+
+  <div class="field">
+    <%= form.label :origin %>
+    <%= form.number_field :origin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :priority %>
+    <%= form.number_field :priority %>
+  </div>
+
+  <div class="field">
+    <%= form.label :response_deadline %>
+    <%= form.datetime_select :response_deadline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :requirement %>
+    <%= form.number_field :requirement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :other_point %>
+    <%= form.text_area :other_point %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :staus %>
+    <%= form.number_field :staus %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
